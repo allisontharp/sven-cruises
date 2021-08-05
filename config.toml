@@ -80,7 +80,7 @@ theme = "autophugo"
     # - you're done. Happy mailing!
     
     [params.footer.contact]
-    hide = true # Set this to true if you don't want to have a contact form on your site
+    # hide = true # Set this to true if you don't want to have a contact form on your site
     # realEmail = "example@example.org"
     # headline = "Get in touch"
     # buttonText = "Send"
