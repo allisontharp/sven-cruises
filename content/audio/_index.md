@@ -1,6 +1,6 @@
 ---
 title: "Audio"
-date: 2021-08-05T16:32:18-04:00
+date: 2021-08-01T16:32:18-04:00
 draft: false
 albumbthumb: "audio/00_hermosa_motor_2.jpeg"
 resources:
