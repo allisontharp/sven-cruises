@@ -1,7 +1,7 @@
 ---
 title: "Engine Removal"
 date: 2022-01-16T12:23:50-05:00
-draft: true
+draft: false
 albumthumb: "engine-removal/IMG_0349.jpeg"
 resources:
 - src: "engine-removal/IMG_0335.jpeg"

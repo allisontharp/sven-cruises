@@ -2,10 +2,14 @@
 
 ## Building the site 
 `hugo`
+or to build with drafts: `hugo -D`
 
 ## Serving Locally
 `hugo server`
 `hugo server -D` to also include posts marked as draft.
+
+## Deploying
+`hugo deploy`
 
 ## Creating new album
 From the [autophugo readme](https://github.com/kc0bfv/autophugo/): 
