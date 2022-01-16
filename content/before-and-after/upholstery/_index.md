@@ -8,4 +8,6 @@ resources:
   phototitle: Door panels
 - src: "before-and-after/upholstery/drivers-side.jpeg"
   phototitle: Driver's Side
+- src: "before-and-after/upholstery/headliner.jpeg"
+  phototitle: Headliner & visors
 ---
