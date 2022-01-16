@@ -1,0 +1,161 @@
+baseURL = "https://sven.cruises"
+languageCode = "en-us"
+title = "Sven"
+theme = "autophugo"
+
+[Author]
+    name = "Sven"
+
+[params]
+    # Meta
+    description = "Sven - The 1985 El Camino"
+    keywords = "sven, chevy, el camino"
+    #msvalidate = ""
+    #googlesiteverification = ""
+    #thumb_width = 480
+    thumb_quality = 100
+    #full_width = 960
+    #full_quality = 90
+    #column_count = 2
+    #breadcrumb_use_title = false
+    #filename_as_phototitle = false
+    #images_downloadable = true
+    favicon = "favicon.ico"
+    
+    # Headerbar links
+    # Do not put too many links here,
+    # it will break mobile appearance
+
+    [[params.header.links]]
+    name = "About"
+    url = "#footer"
+    icon = "fa-info-circle"    
+    
+    # Footer panel
+    
+    [params.footer.paragraph]
+    headline = "Sven the 1985 El Camino"
+    text = "Sven is one of only about 2200 Choo Choo Customs El Caminos."
+    
+    # [params.footer.social]
+    # headline = "Follow me"
+
+    # [[params.footer.social.links]]
+    # label = "Twitter"
+    # url = "#"
+    # icon = "fa-twitter"
+ 
+    # [[params.footer.social.links]]
+    # label = "Facebook"
+    # url = "#"
+    # icon = "fa-facebook"
+ 
+    # [[params.footer.social.links]]
+    # label = "Instagram"
+    # url = "#"
+    # icon = "fa-instagram"
+
+    # [[params.footer.social.links]]
+    # label = "Github"
+    # url = "#"
+    # icon = "fa-github"
+
+    # [[params.footer.social.links]]
+    # label = "LinkedIn"
+    # url = "#"
+    # icon = "fa-linkedin"
+    
+    # Contact form
+    
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'realEmail' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    
+    [params.footer.contact]
+    # hide = true # Set this to true if you don't want to have a contact form on your site
+    # realEmail = "example@example.org"
+    # headline = "Get in touch"
+    # buttonText = "Send"
+    # resetText = "Reset"
+    
+    # # 'warning' defines error messages for invalid inputs
+    # [params.footer.contact.name]
+    # text = "Name *"
+    # warning = "Please, enter your name"
+
+    # [params.footer.contact.email]
+    # text = "Email *"
+    # warning = "Please, enter your email."
+
+    # [params.footer.contact.message]
+    # text = "Message *"
+    # warning = "Please, enter your message"
+    
+    # Copyright
+    [params.footer.copyright]
+    name = "Allison Tharp"
+
+[deployment]
+    # By default, files are uploaded in an arbitrary order.
+    # Files that match the regular expressions in the "Order" list
+    # will be uploaded first, in the listed order.
+    order = [".jpg$", ".gif$"]
+
+
+    [[deployment.targets]]
+    # An arbitrary name for this target.
+    name = "sven-cruises-deployment"
+
+    # S3; see https://gocloud.dev/howto/blob/#s3
+    # For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
+    URL = "s3://sven-cruises?region=us-east-1"
+
+    # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
+    cloudFrontDistributionID = "EYL6B4PL9SDJR"
+
+    # Optionally, you can include or exclude specific files.
+    # See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.
+    # If non-empty, the pattern is matched against the local path.
+    # All paths are matched against in their filepath.ToSlash form.
+    # If exclude is non-empty, and a local or remote file's path matches it, that file is not synced.
+    # If include is non-empty, and a local or remote file's path does not match it, that file is not synced.
+    # As a result, local files that don't pass the include/exclude filters are not uploaded to remote,
+    # and remote files that don't pass the include/exclude filters are not deleted.
+    # include = "**.html" # would only include files with ".html" suffix
+    # exclude = "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
+
+
+    # [[deployment.matchers]] configure behavior for files that match the Pattern.
+    # See https://golang.org/pkg/regexp/syntax/ for pattern syntax.
+    # Pattern searching is stopped on first match.
+
+    # Samples:
+
+    [[deployment.matchers]]
+    # Cache static assets for 1 year.
+    pattern = "^.+\\.(js|css|svg|ttf)$"
+    cacheControl = "max-age=31536000, no-transform, public"
+    gzip = true
+
+    [[deployment.matchers]]
+    pattern = "^.+\\.(png|jpg)$"
+    cacheControl = "max-age=31536000, no-transform, public"
+    gzip = false
+
+    [[deployment.matchers]]
+    # Set custom content type for /sitemap.xml
+    pattern = "^sitemap\\.xml$"
+    contentType = "application/xml"
+    gzip = true
+
+    [[deployment.matchers]]
+    pattern = "^.+\\.(html|xml|json)$"
+    gzip = true
