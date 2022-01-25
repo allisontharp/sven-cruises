@@ -1,4 +1,4 @@
-baseURL = "https://sven.cruises"
+baseURL = "https://sven.cruises/"
 languageCode = "en-us"
 title = "Sven"
 theme = "autophugo"
