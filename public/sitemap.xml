@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/engine-removal/</loc>
-    <lastmod>2022-01-16T12:23:50-05:00</lastmod>
+    <loc>http://localhost:1313/car-shows/2024-elcofest/</loc>
+    <lastmod>2025-03-04T13:34:11-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-03-04T13:34:11-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/engine-removal/</loc>
     <lastmod>2022-01-16T12:23:50-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/before-and-after/upholstery/</loc>
